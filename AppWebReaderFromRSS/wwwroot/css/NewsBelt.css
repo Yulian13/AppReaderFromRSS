@@ -1,0 +1,41 @@
+﻿select {
+	margin-left: 10px;
+}
+
+.tableDiv {
+	margin-top: 20px;
+}
+
+.tableDiv table {
+	width: 100%;
+}
+
+.tableDiv td {
+	border: 1px solid;
+	width: 25%;
+}
+
+.tableDiv td span {
+	margin: 10px;
+}
+
+.tableDiv td a {
+	margin: 10px;
+}
+
+.DivStepsRadio {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.radioStep {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5px;
+}
+
+#mainContener div {
+	margin-top: 10px;
+}

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<string>
+@{
+	ViewData["Title"] = "News belt";
+	ViewData["PageCssFile"] = "/css/NewsBelt.css";
+}
+
+<div class="text-center">
+	<div>
+		<span>sourse</span>
+		<select id="sourceSelect" onload="GetSourсes()">
+			<option value="" selected>all sourses</option>
+			@foreach (string sourсe in Model)
+			{
+				<option value="@sourсe">@sourсe</option>
+			}
+		</select>
+	</div>
+
+	<div>
+		<input type="radio" id="RadioOrderByDate"
+			   name="OrderBy" value="date" checked>
+		<label for="RadioOrderByDate">Sort by date</label>
+
+		<input type="radio" id="RadioOrderBySourse"
+			   name="OrderBy" value="sourse">
+		<label for="RadioOrderBySourse">Sort by sourse</label>
+	</div>
+
+	<div>
+		<button type="button" onclick="reRenderPageWithData()">View</button>
+	</div>
+
+	<div class="tableDiv">
+		<table id="viewTable">
+			<tr>
+				<td>
+					<span>Sourse</span>
+				</td>
+				<td>
+					<span>Title News</span>
+				</td>
+				<td>
+					<span>Description News</span>
+				</td>
+				<td>
+					<span>Publication date</span>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="DivStepsRadio" id="divStepsRadio"></div>
+</div>
+
+<script src="~/js/NewsBelt.js"></script>
+<script src="~/js/NewsBeltRenderViewTable.js"></script>
+<script src="~/js/NewsBeltRenderStepRadio.js"></script>
+<script>
+	reRenderPageWithData();
+</script>
+
